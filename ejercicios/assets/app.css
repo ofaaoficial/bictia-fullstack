@@ -1,0 +1,166 @@
+@charset "UTF-8";
+
+/**
+    Variables de colores
+ */
+
+:root {
+    --white: #fff;
+    --bg-article: #add8e6;
+    --bg-purple: #780078;
+}
+
+/**
+RESET CSS
+ */
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    color: #444;
+    word-break: break-word;
+    text-decoration: none;
+    list-style: none;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+.container {
+    padding: 30px 100px;
+}
+
+.row {
+    display: grid;
+    grid-template-columns: repeat(3, calc(100% / 3));
+    grid-template-rows: repeat(6, calc(100% / 6));
+    grid-gap: 5px;
+    width: 100%;
+    height: 2000px;
+}
+
+img {
+    object-fit: cover;
+    width: 100%;
+}
+
+/**
+Estilos del menu
+ */
+.nav, .nav-menu {
+    display: flex;
+    align-items: center;
+}
+
+.nav {
+    padding: 30px 100px;
+    box-shadow: 0 5px 10px #0000001a;
+    background: var(--bg-purple);
+}
+
+.brand {
+    font-size: 20px;
+    font-family: Montserrat;
+    font-weight: bold;
+    color: var(--white);
+}
+
+.nav-menu {
+    margin-left: auto;
+}
+
+.nav-menu li {
+    margin-left: 20px;
+}
+
+.nav-menu li a {
+    font-family: "Montserrat";
+    color: var(--white);
+}
+
+.nav-menu li a:not(:hover) {
+    opacity: .7;
+}
+
+/**
+    Posicionamiento elementos
+ */
+article {
+    background: var(--bg-article);
+    border: 1px solid red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.article-1 {
+    grid-row: 1/3;
+    grid-column: 1/3;
+}
+
+.article-6 {
+    grid-row: 3/5;
+    grid-column: 3;
+}
+
+.article-9 {
+    grid-column: 1/3;
+    grid-row: 5;
+}
+
+.article-11 {
+    grid-column: 1 / 4;
+}
+
+/**
+    estilos mobile
+ */
+@media (max-width: 715px) {
+    .row {
+        grid-template-columns: repeat(2, calc(100% / 2));
+        grid-template-rows: repeat(8, calc(100% / 8));
+    }
+
+    [class*="article-"] {
+        grid-column: auto;
+        grid-row: auto;
+    }
+
+    .article-1 {
+        grid-column: 1/3;
+    }
+
+    .article-7 {
+        grid-column: 2;
+        grid-row: 4 /6;
+    }
+
+    .article-9 {
+        grid-column: 1 / 3;
+    }
+
+    .article-11 {
+        grid-row: 8;
+        grid-column: 1/3;
+    }
+    .nav {
+        flex-direction: column;
+    }
+
+    .nav-menu {
+        margin-left: 0;
+        margin-top: 20px;
+    }
+}
+
+footer {
+    margin-top: 30px;
+    background: var(--bg-purple);
+    padding: 20px;
+}
+
+footer p, footer a {
+    color: var(--white);
+}
