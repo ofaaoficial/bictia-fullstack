@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+
+<script>
+    let dia = prompt('Digite el dia');
+
+    let hora = dia === 'sabado' || dia === 'domingo' ? prompt('Digite la hora') : null;
+    let cantidadGalones = prompt('Cantidad de galones');
+
+    const calcularValorGasolina = (dia, hora, cantidadGalones) => {
+        let valorGasolinaNormal = 1000;
+        let total = 0;
+
+        /**
+         * Mecanimos de control
+         */
+        switch (dia) {
+            case 'lunes' :
+                return cantidadGalones * (valorGasolinaNormal + (10 * valorGasolinaNormal / 100));
+            case 'miercoles':
+                return cantidadGalones * (valorGasolinaNormal - 100);
+            case 'viernes':
+                return cantidadGalones * (hora > 3 ? valorGasolinaNormal - 150 : valorGasolinaNormal);
+            case 'sabado' || 'domingo':
+                return cantidadGalones * (valorGasolinaNormal + (20 * valorGasolinaNormal / 100));
+            default :
+                return cantidadGalones * (valorGasolinaNormal);
+        }
+
+        /**
+         * Codicionales if / else
+         */
+        // if (dia === 'lunes') {
+        //     total = valorGasolinaNormal + (10 * valorGasolinaNormal / 100);
+        // } else if (dia === 'miercoles') {
+        //     total = valorGasolinaNormal - 100;
+        // } else if (dia === 'viernes') {
+        //     if (hora >= 3 && hora <= 6) {
+        //         total = valorGasolinaNormal - 150;
+        //     } else {
+        //         total = valorGasolinaNormal;
+        //     }
+        // } else if (dia === 'sabado' || dia === 'domingo') {
+        //     total = valorGasolinaNormal + (20 * valorGasolinaNormal / 100);
+        // }
+        // return cantidadGalones * (total > 0 ? total : valorGasolinaNormal);
+    };
+
+    alert(calcularValorGasolina(dia, hora, cantidadGalones));
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Reto 1</title>
+</head>
+<body>
+<script>
+    // 1. Reto
+    // La última letra de cada palabra debe ir en mayúsculas y el resto en minúsculas
+    // Resultado
+    // var salida = "laS frutaS soN muY ricaS"
+
+    /**
+     * Recibimos el texto a alterar.
+     */
+    let texto = prompt("Digite el texto");
+
+    /**
+     * Convertimos todas las palabras en minusculas.
+     * @type {string}
+     */
+    texto = [...texto].map(letra => letra.toLowerCase()).join('');
+
+    /**
+     * Separacion de palabras en un arreglo.
+     * @type {string[]}
+     */
+    let arrPalabras = texto.split(' ');
+
+    /**
+     * Eliminar el ultimo caracter y concatena el caracter eliminado en mayuscula.
+     */
+    alert(arrPalabras.map(palabra => palabra.slice(0,-1) + palabra[palabra.length - 1].toUpperCase()).join(' '));
+</script>
+</body>
+</html>

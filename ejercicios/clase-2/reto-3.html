@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Reto 3</title>
+</head>
+<body>
+<script>
+    //3. Contar las veces que se repite cada palabra
+
+    /**
+     * Recibimos el texto a analizar.
+     * @type {string}
+     */
+    let texto = 'hola xd hola jajaj xd oli';
+
+    /**
+     * Divicion de palabras en un arreglo
+     * @type {string[]}
+     */
+    let arrPalabras = texto.split(' ');
+    /**
+     * Objeto que va almacenar las palbras y el contador;
+     * @type {{}}
+     */
+    let objContador = { };
+
+    /**
+     * Se recorre cada palabra y se cuenta en el texto.
+     */
+    arrPalabras.map(palabra => !objContador.hasOwnProperty(palabra) ? objContador[palabra] = 1 : objContador[palabra]++);
+
+    /**
+     * msg a retornar al usuario.
+     * @type {string}
+     */
+    let msg = 'En el texto se cuenta con un total de: ';
+    for (let palabra in objContador) {
+        msg += `\n${palabra} => ${objContador[palabra]}`;
+    }
+
+    alert(msg);
+
+
+</script>
+</body>
+</html>

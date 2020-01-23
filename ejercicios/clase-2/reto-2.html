@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Reto 2</title>
+</head>
+<body>
+<script>
+    //2. Reto
+    // que todas las palabras esten al reves
+
+    /**
+     * Recibimos el texto a alterar.
+     */
+    let texto = prompt('Digite el texto');
+
+    /**
+     * Dividios las pabras en un arreglo
+     * @type {string[]}
+     */
+    let arrPalabras = texto.split(' ');
+
+    /**
+     * Recoremos cada caracter de cada palabra para hacer un reverse y luego lo unimos.
+     */
+    alert(arrPalabras.map(palabra => [...palabra].reverse().join('')).join(' '));
+</script>
+
+</body>
+</html>
