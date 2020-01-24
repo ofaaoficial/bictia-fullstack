@@ -31,6 +31,14 @@ button, input {
     color: #fff;
 }
 
+button:hover:not(.igual){
+    background: #404040;
+}
+
 .igual {
-    background: #ecb823;
+    background: #dba723;
+}
+
+.igual:hover{
+    background: #b38022;
 }
