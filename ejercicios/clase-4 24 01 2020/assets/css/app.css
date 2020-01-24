@@ -1,0 +1,36 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #333;
+    width: 100%;
+    height: 100vh;
+}
+
+.calculadora {
+    display: grid;
+    width: 200px;
+    height: 300px;
+    grid-template-columns: repeat(4, calc(100% / 4));
+    grid-template-rows: repeat(5, calc(100% / 5));
+    grid-gap: 2px;
+}
+
+.operacion {
+    padding: 20px;
+    grid-column: 1 / 5;
+}
+
+.igual {
+    grid-column: 2/4;
+}
+
+button, input {
+    cursor: pointer;
+    background: #444444;
+    color: #fff;
+}
+
+.igual {
+    background: #ecb823;
+}
