@@ -6,63 +6,19 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Filtro</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
-<style>
-    * {
-        margin: 0;
-        padding: 0;
-        -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        box-sizing: border-box;
-        font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-    }
-
-    body {
-        width: 100%;
-        overflow-x: hidden;
-    }
-
-    #filtro{
-        display: block;
-        width: 100%;
-        padding: 12px;
-        margin-top: 20px;
-    }
-
-    .container {
-        padding: 30px;
-    }
-
-    .row {
-        display: flex;
-        flex-wrap: wrap;
-    }
-
-    .w-3 {
-        width: calc(100% / 3);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    img {
-        width: 90%;
-        object-fit: cover;
-    }
-
-</style>
 <section class="container">
     <h2>Filtrar por</h2>
     <select id="filtro">
-        <option value="todo">Todas</option>
+        <option value="todo">Todo</option>
         <option value="ropa">Ropa</option>
         <option value="tecnologia">Tecnologia</option>
     </select>
 </section>
 
 <section class="container row">
-
     <article class="w-3" data-category="tecnologia">
         <img src="assets/imgs/celular.jpg" alt="img">
     </article>
@@ -82,34 +38,8 @@
     <article class="w-3" data-category="tecnologia">
         <img src="assets/imgs/pc.jpg" alt="img">
     </article>
-
 </section>
 
-<script>
-    document.querySelector('#filtro').addEventListener('change', function (event) {
-        event.preventDefault();
-
-        let filtro = this.value;
-
-        if(filtro !== 'todo'){
-            document.querySelectorAll(`.w-3:not([data-category="${filtro}"])`)
-                .forEach(function (element) {
-                    element.style.display = 'none';
-                });
-
-            document.querySelectorAll(`.w-3[data-category="${filtro}"]`)
-                .forEach(function (element) {
-                    element.style.display = 'block';
-                });
-        }else{
-            document.querySelectorAll(`.w-3`)
-                .forEach(function (element) {
-                    element.style.display = 'block';
-                });
-        }
-
-
-    })
-</script>
+<script src="assets/js/app.js"></script>
 </body>
 </html>
