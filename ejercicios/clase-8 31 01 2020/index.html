@@ -1,0 +1,29 @@
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Rick & Morty API</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">Buscador Rick & Morty</a>
+        </div>
+        <div class="navbar-form navbar-left">
+            <div class="form-group">
+                <input type="text" name="search" class="form-control" id="search" placeholder="Search" onkeydown="buscar(event)">
+            </div>
+            <button type="button" onclick="buscar(event)" class="btn btn-success">Buscar</button>
+        </div>
+    </div>
+</nav>
+<section class="container"></section>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>

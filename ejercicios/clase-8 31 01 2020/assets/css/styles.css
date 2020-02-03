@@ -1,0 +1,29 @@
+body {
+    background-color: #f9f9f9;
+}
+
+.panel {
+    margin-bottom: 20px !important;
+
+}
+
+.panel-body {
+    padding: 0px;
+    margin-bottom: 0px;
+}
+
+.panel-body h4 {
+    padding: 10px;
+}
+
+.panel-body small {
+    padding-left: 10px;
+}
+
+.panel-body p {
+    padding-left: 10px;
+}
+
+.list-group {
+    margin-bottom: 0px;
+}
