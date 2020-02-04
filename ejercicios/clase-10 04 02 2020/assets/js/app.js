@@ -1,3 +1,16 @@
+$('#form-login').submit(function (e) {
+    e.preventDefault();
+    if (
+        $('#email').val() !== '' &&
+        $('#password').val() !== ''
+    ) {
+        localStorage.email = $('#email').val();
+        location.href = 'index.html';
+    } else {
+        alert('Datos obligatorios')
+    }
+})
+
 function generarContenido(movies) {
     let html = '';
 
