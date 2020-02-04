@@ -2,37 +2,37 @@ const productos = [
     {
         nombre: "Celular 1",
         precio: "400000",
-        imagen: "assets/imgs/celular.jpg",
+        imagen: "css/imgs/celular.jpg",
         categoria: "tecnologia"
     },
     {
         nombre: "Equipo 1",
         precio: "1200000",
-        imagen: "assets/imgs/pc.jpg",
+        imagen: "css/imgs/pc.jpg",
         categoria: "tecnologia"
     },
     {
         nombre: "Saco 1",
         precio: "50000",
-        imagen: "assets/imgs/saco.jpg",
+        imagen: "css/imgs/saco.jpg",
         categoria: "ropa"
     },
     {
         nombre: "Pantalon 1",
         precio: "50000",
-        imagen: "assets/imgs/pantalon.jpg",
+        imagen: "css/imgs/pantalon.jpg",
         categoria: "ropa"
     },
     {
         nombre: "Celular 2",
         precio: "400000",
-        imagen: "assets/imgs/celular.jpg",
+        imagen: "css/imgs/celular.jpg",
         categoria: "tecnologia"
     },
     {
         nombre: "Equipo 2",
         precio: "1400000",
-        imagen: "assets/imgs/pc.jpg",
+        imagen: "css/imgs/pc.jpg",
         categoria: "tecnologia"
     },
 ];

@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cine</title>
+    <link rel="stylesheet" href="vendor/Semantic-UI-CSS/semantic.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+<div class="ui secondary container menu">
+    <a class="item logo">
+        Pel<span>!</span>S
+    </a>
+    <a class="item" href="index.html">
+        Inicio
+    </a>
+    <a class="item active" href="acerca-de-mi.html">
+        Acerca de mi
+    </a>
+    <div class="right menu">
+        <a class="item" href="cartelera.html">
+            Cartelera
+        </a>
+        <a class="item" href="proximos-estrenos.html">
+            Proximos estrenos
+        </a>
+        <div class="item">
+            <div class="ui item" id="email"></div>
+            <a class="ui positive button" href="login.html" id="btn-ingreso">Ingresar</a>
+            <a class="ui teal button hide" onclick="salir()" id="btn-salir">Salir</a>
+        </div>
+    </div>
+</div>
+
+<section class="ui modal" id="form-login">
+    <i class="close icon"></i>
+    <section class="header">
+        Ingresar
+    </section>
+    <section class="content">
+        <form class="ui form">
+            <div class="field">
+                <label>Correo electronico</label>
+                <input type="text" name="email" placeholder="Correo electronico">
+            </div>
+            <div class="field">
+                <label>Contraseña</label>
+                <input type="password" name="password" placeholder="Contraseña">
+            </div>
+        </form>
+    </section>
+    <section class="actions">
+        <button class="ui black deny button">
+            Cancelar
+        </button>
+        <button class="ui positive button">
+            Ingresar
+        </button>
+    </section>
+</section>
+<section class="ui container mt-5" style="display: flex; align-items:center; width: 100%; flex-direction:column;">
+    <h2>Acerca de mi</h2>
+    <div class="ui card">
+        <div class="image">
+            <img src="https://avatars1.githubusercontent.com/u/26628689?s=460&v=4">
+        </div>
+        <div class="content">
+            <a class="header">Oscar Amado</a>
+            <div class="meta">
+                <span class="date">04 de febrero del 2020</span>
+            </div>
+            <div class="description">
+                Apasionado por la tecnología y el desarrollo de software💻, amante al conocimiento
+            </div>
+        </div>
+        <div class="extra content">
+            <a>
+                <i class="user icon"></i>
+                -2 Friends
+            </a>
+        </div>
+    </div>
+</section>
+
+<footer class="footer ui container">
+    <p>Realizado por <span>Oscar Amado</span></p>
+</footer>
+
+<script src="assets/js/jquery.min.js"></script>
+<script src="vendor/Semantic-UI-CSS/semantic.min.js"></script>
+<script src="assets/js/app.js"></script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+</body>
+</html>
+
