@@ -101,6 +101,7 @@ const proximosEstrenos = [
         rating: 5
     },
 ];
+
 const cartelera = [
     {
         title: "El buen mentiroso",
