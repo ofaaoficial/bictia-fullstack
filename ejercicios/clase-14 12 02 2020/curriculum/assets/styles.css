@@ -1,0 +1,11 @@
+*{
+    list-style: none;
+}
+
+.d-flex{
+    display: flex;
+}
+
+.fxd-column{
+    flex-direction: column;
+}
